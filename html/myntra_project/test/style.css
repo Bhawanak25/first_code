@@ -1,0 +1,570 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f2f5; /* Light grey background for general pages */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #0d6efd; /* Bootstrap primary blue */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e0e0e0 !important;
+}
+
+/* Header Styles (for index.html/welcome.html) */
+.header {
+    background: linear-gradient(to right, #0d6efd, #6610f2); /* Blue to Purple gradient */
+    color: white;
+    padding: 120px 0 80px 0; /* More top padding to account for fixed navbar */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* To contain any absolute elements */
+}
+
+.header .display-4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.header .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.header .img-fluid {
+    max-height: 250px;
+    width: auto;
+    margin-top: 40px;
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Login/Signup Buttons on Header */
+.header-buttons {
+   
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000; /* Ensure they are above other content */
+    margin-right: 950px;
+    margin-top: -70px;
+    
+}
+
+.header-buttons .btn {
+    min-width: 90px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-dark {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #343a40;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.section .row {
+    margin-top: 30px;
+}
+
+.section .col-md-4 {
+    padding: 20px;
+}
+
+.section .fa-3x {
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* Why Use PassHive Section */
+#section-why {
+    background: linear-gradient(to right, #0d6efd, #007bff); /* Blue gradient */
+    color: white;
+    padding: 60px 0;
+}
+
+#section-why .fa-3x {
+    color: white; /* Icons should be white on dark background */
+}
+
+#section-why h5 {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* Feedback Section */
+#section-feedback {
+    background-color: #e9ecef;
+    padding: 60px 0;
+}
+
+#section-feedback .form-control {
+    border-radius: 0.5rem;
+    padding: 10px 15px;
+}
+
+#section-feedback .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: 10px 30px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+#section-feedback .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #212529; /* Dark grey */
+    color: white;
+    padding: 50px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer h5 {
+    color: #0d6efd; /* Highlight footer headings */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 8px;
+}
+
+.footer .fa {
+    margin-right: 8px;
+    color: #0d6efd;
+}
+
+/* --- homeproject.php(Dashboard) Specific Styles --- */
+body.home-page {
+    background: linear-gradient(to right, #0d6efd, #6610f2); /* Consistent with header gradient */
+    min-height: 100vh; /* Ensure full height background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed; /* Fix background during scroll */
+    padding: 20px; /* Add some padding around the content */
+}
+
+.logo-text {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700; /* Made bolder */
+    font-style: italic;
+    font-size: 4rem; /* Adjusted for better responsiveness */
+    text-shadow: 3px 3px 8px rgba(0, 255, 255, 0.7); /* Aqua shadow */
+    -webkit-text-stroke: 1.5px black; /* Thinner stroke */
+    color: white; /* Ensure text color is white */
+    margin-bottom: 50px;
+}
+
+.block {
+    width: 280px; /* Slightly larger default */
+    height: 280px;
+    margin: 20px; /* Adjusted margin for better spacing */
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #a7ccdb, #689cb1); /* More subtle gradient */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Softer, larger shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For ripple effect or other animations */
+    overflow: hidden; /* Hide overflowing elements like ripple */
+}
+
+.block:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and slightly enlarge */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+    background: linear-gradient(to bottom right, #c1e1ec, #8ebdd3); /* Lighter hover background */
+}
+
+.hub-icon,
+.hub-icon-gen {
+    height: 120px; /* Slightly larger icons */
+    width: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.block:hover .hub-icon,
+.block:hover .hub-icon-gen {
+    transform: scale(1.1); /* Slightly scale icons on hover */
+}
+
+.link-text {
+    color: #333; /* Darker text for better contrast on lighter block */
+    text-decoration: none;
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: 600;
+}
+
+.profile-button {
+    z-index: 1050; /* Above navbar if fixed */
+}
+
+.profile-popup {
+    position: fixed; /* Use fixed for better positioning */
+    top: 20px;
+    left: 20px;
+    width: 300px; /* Slightly wider popup */
+    background-color: #ffffff; /* Solid white background */
+    border-radius: 15px; /* More rounded */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother animation */
+    transform: translateX(-120%); /* Start off-screen */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.profile-popup.show {
+    transform: translateX(0%); /* Slide in */
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.profile-popup img {
+    border: 3px solid #007bff; /* Thicker border */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Subtle glow */
+}
+
+.profile-popup hr {
+    border-top: 1px solid #eee;
+}
+
+.profile-popup .btn {
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.profile-popup .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.profile-popup .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.profile-popup .btn-light:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* --- loginform.php & signup.php Specific Styles --- */
+body.auth-page {
+    background: linear-gradient(to right, #0d6efd, #6610f2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-container {
+    background: white;
+    border-radius: 15px;
+    padding: 40px; /* Increased padding */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.auth-container h3 {
+    text-align: center;
+    background-color: #f8f9fa; /* Light background for heading */
+    padding: 15px;
+    margin-bottom: 30px; /* More space below heading */
+    border-radius: 10px;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.auth-container label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block; /* Ensure label takes full width */
+}
+
+.auth-container .form-control {
+    border-radius: 10px; /* Rounded input fields */
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+}
+
+.auth-container .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.auth-container .input-group {
+    position: relative;
+}
+
+.auth-container .toggle-visibility {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+    z-index: 10; /* Ensure icon is clickable */
+}
+
+.auth-container .toggle-visibility:hover {
+    color: #0d6efd;
+}
+
+.auth-container .btn-info {
+    background-color: #0d6efd; /* Use primary blue for buttons */
+    border-color: #0d6efd;
+    color: white;
+    font-weight: 600;
+    padding: 12px 0;
+    margin-top: 20px; /* Space above button */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-container .btn-info:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+}
+
+.auth-container .btn-info a {
+    color: inherit; /* Ensure link color is inherited from button */
+    text-decoration: none;
+    display: block; /* Make the link fill the button */
+    width: 100%;
+    height: 100%;
+}
+
+.auth-container p {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+}
+
+.auth-container p span,
+.auth-container p a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Specific for signup.php */
+.top-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-left: 0; /* Remove left margin for better centering */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.top-text b {
+    color: #333;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .logo-text {
+        font-size: 3rem;
+    }
+    .block {
+        width: 220px;
+        height: 220px;
+        margin: 15px;
+    }
+    .hub-icon, .hub-icon-gen {
+        height: 90px;
+    }
+    .link-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #0d6efd;
+        padding: 15px;
+        border-radius: 0 0 8px 8px;
+    }
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .header {
+        padding: 100px 0 60px 0;
+    }
+    .header .display-4 {
+        font-size: 2.5rem;
+    }
+    .header .lead {
+        font-size: 1rem;
+    }
+    .header .img-fluid {
+        max-height: 200px;
+    }
+    .header-buttons {
+        position: static; /* Position normally for smaller screens */
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .header-buttons .btn {
+        margin: 0 5px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .footer .col-md-3 {
+        margin-bottom: 30px;
+    }
+
+    .logo-text {
+        font-size: 2.5rem;
+    }
+    .block {
+        width: 80%; /* Make blocks wider on small screens */
+        max-width: 250px; /* But keep a max-width */
+        margin: 20px auto; /* Center blocks */
+    }
+    .hub-icon, .hub-icon-gen {
+        height: 80px;
+    }
+    .link-text {
+        font-size: 1.3rem;
+    }
+
+    .auth-container {
+        padding: 30px;
+    }
+    .auth-container h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header .display-4 {
+        font-size: 2rem;
+    }
+    .header .lead {
+        font-size: 0.9rem;
+    }
+    .header .img-fluid {
+        max-height: 150px;
+    }
+    .logo-text {
+        font-size: 2rem;
+        -webkit-text-stroke: 1px black;
+    }
+    .auth-container {
+        padding: 25px;
+    }
+    .auth-container h3 {
+        font-size: 1.5rem;
+    }
+    .toggle-visibility {
+        font-size: 1rem;
+        right: 10px;
+    }
+}
+.profile {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px gray;
+    }
+    .logout-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff4d4d;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+    }

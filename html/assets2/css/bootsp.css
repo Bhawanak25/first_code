@@ -1,0 +1,22 @@
+.bg-sky{
+    background-color:rgb(79, 79, 179);
+}
+.h-40{
+    height:40px;
+}
+.f-16.social-media{
+  color:black;
+  margin:8px;
+  text-decoration: none;
+  padding-left:3px;
+
+}
+.f-16{
+   font-size:16px;
+}
+.logo-text{
+   margin-top:0px; 
+}
+.mb{
+    margin-bottom:50px;
+}
